@@ -1,9 +1,13 @@
+#pip install PyPDF2
+#pip install openai
+#pip install streamlit==1.14.0
+
 from io import StringIO
 import streamlit as st
 import openai
 import PyPDF2 
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 document_list3 = []
 docs = []
@@ -49,3 +53,5 @@ with tab2:
         document_list3.append(pageObj.extractText())
     
     st.session_state['doc'] = "".join(document_list3)
+
+
